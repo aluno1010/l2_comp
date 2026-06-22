@@ -1,5 +1,10 @@
---Taxi-- Gulosos
+# Exercícios de Algoritmos
 
+## Taxi (Guloso)
+
+### Solução
+
+```python
 n = int(input())
 grupos = list(map(int, input().split()))
 
@@ -10,10 +15,8 @@ for g in grupos:
 
 taxis = qtd[4]
 
-
 taxis += qtd[3]
 qtd[1] = max(0, qtd[1] - qtd[3])
-
 
 taxis += qtd[2] // 2
 
@@ -21,16 +24,18 @@ if qtd[2] % 2:
     taxis += 1
     qtd[1] = max(0, qtd[1] - 2)
 
-
 taxis += (qtd[1] + 3) // 4
 
 print(taxis)
+```
 
+---
 
+## Menor Intervalo (Guloso)
 
+### Solução
 
-
--- Menor Intevalo - gulosos 
+```python
 n, k = map(int, input().split())
 nums = list(map(int, input().split()))
 
@@ -40,11 +45,15 @@ menor = min(nums)
 resposta = maior - menor - 2 * k
 
 print(max(0, resposta))
+```
 
+---
 
+## Fair Distribution of Cookies (Branch and Bound)
 
+### Solução
 
--- branch and bound -- cookies
+```python
 n, k = map(int, input().split())
 cookies = list(map(int, input().split()))
 
@@ -70,18 +79,21 @@ def bt(i):
 
         criancas[j] -= cookies[i]
 
-        # poda de simetria
         if criancas[j] == 0:
             break
 
 bt(0)
 
 print(melhor)
+```
 
+---
 
+## Matchsticks to Square (Branch and Bound)
 
+### Solução
 
--- branch and bound -- Matchsticks to Square
+```python
 n = int(input())
 matchsticks = list(map(int, input().split()))
 
@@ -117,10 +129,10 @@ def bt(i):
 
         lados[j] -= matchsticks[i]
 
-        # poda de simetria
         if lados[j] == 0:
             break
 
     return False
 
 print(str(bt(0)).lower())
+```
