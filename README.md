@@ -10,18 +10,18 @@ for g in grupos:
 
 taxis = qtd[4]
 
-# Grupos de 3
+
 taxis += qtd[3]
 qtd[1] = max(0, qtd[1] - qtd[3])
 
-# Grupos de 2
+
 taxis += qtd[2] // 2
 
 if qtd[2] % 2:
     taxis += 1
     qtd[1] = max(0, qtd[1] - 2)
 
-# Grupos de 1 restantes
+
 taxis += (qtd[1] + 3) // 4
 
 print(taxis)
