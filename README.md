@@ -1,6 +1,6 @@
 ---
 
-## Q1 — Maior Substring Exemplar
+Q1 — Maior Substring Exemplar
 
 
 ```python
