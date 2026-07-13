@@ -1,6 +1,6 @@
 ---
 
-## Q1 — Maior Substring Exemplar ##
+## Q1 — Maior Substring Exemplar
 
 
 ```python
@@ -31,16 +31,12 @@ def main():
 
 if __name__ == '__main__':
     main()
-```
 
-**Complexidade:** O(n²) no pior caso.
+Complexidade: O(n²) no pior caso.
 
 ---
+Q2 — Investimento Certeiro
 
-## Q2 — Investimento Certeiro ##
-
-
-```python
 def maior_lucro(precos):
     n = len(precos)
     if n == 0:
@@ -63,8 +59,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-```
 
-**Complexidade:** O(n) tempo, O(n) espaço.
+Complexidade: O(n) tempo, O(n) espaço.
 
 ---
