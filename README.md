@@ -1,9 +1,8 @@
----
+
 
 Q1 — Maior Substring Exemplar
 
 
-```python
 def maior_substring_exemplar(s):
     if not s:
         return ""
@@ -35,6 +34,8 @@ if __name__ == '__main__':
 Complexidade: O(n²) no pior caso.
 
 ---
+
+
 Q2 — Investimento Certeiro
 
 def maior_lucro(precos):
