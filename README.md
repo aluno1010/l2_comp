@@ -1,4 +1,6 @@
 //Q1- MAIOR SUB STRING EXEMPLAR
+
+
 def maior_substring_exemplar(s):
     if not s:
         return ""
@@ -23,14 +25,15 @@ def main():
     resultado = maior_substring_exemplar(s)
     print(resultado if resultado != "" else "0")
 
-
-
 if __name__ == '__main__':
     main()
 
 
 
+
 //Q2- INVESTIMENTO CERTEIRO
+
+
 
 def maior_lucro(precos):
     n = len(precos)
