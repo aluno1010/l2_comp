@@ -1,7 +1,4 @@
-
-
 Q1 — Maior Substring Exemplar
-
 
 def maior_substring_exemplar(s):
     if not s:
@@ -31,7 +28,6 @@ def main():
 if __name__ == '__main__':
     main()
 
-Complexidade: O(n²) no pior caso.
 
 ---
 
@@ -61,6 +57,6 @@ def main():
 if __name__ == '__main__':
     main()
 
-Complexidade: O(n) tempo, O(n) espaço.
+
 
 ---
