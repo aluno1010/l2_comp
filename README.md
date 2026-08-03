@@ -74,4 +74,45 @@ def main():
 
 if __name__ == '__main__':
     main()
+----------------------------------------------------------------------------------------------------------------------------------------------------
+codigos melhorados: cronograma de aula
 
+def main():
+    n, m = map(int, input().split())
+    adjacencia = [[] for _ in range(n)]
+    for _ in range(m):
+        a, b = map(int, input().split())
+        adjacencia[b].append(a)
+
+    estado = [0] * n  # 0 = nao visitado, 1 = em andamento, 2 = concluido
+    pos = [0] * n
+    postorder = []
+
+    for inicio in range(n):
+        if estado[inicio] != 0:
+            continue
+        pilha = [inicio]
+        estado[inicio] = 1
+        while pilha:
+            atual = pilha[-1]
+            if pos[atual] < len(adjacencia[atual]):
+                prox = adjacencia[atual][pos[atual]]
+                pos[atual] += 1
+                if estado[prox] == 1:
+                    print('Impossivel')
+                    return
+                if estado[prox] == 0:
+                    estado[prox] = 1
+                    pilha.append(prox)
+            else:
+                estado[atual] = 2
+                postorder.append(atual)
+                pilha.pop()
+
+    print(' '.join(map(str, reversed(postorder))))
+
+
+if __name__ == '__main__':
+    main()
+
+ -------------------------------------------------
